@@ -55,10 +55,10 @@ class Person {
 
 
   const Person({
-    @required this.id,
-    @required this.age,
-    @required String firstName,
-    @required String lastName,
+    required this.id,
+    required this.age,
+    required String firstName,
+    required String lastName,
   })
       : _firstName = firstName,
         _lastName = lastName;
@@ -96,10 +96,10 @@ class Person {
 
 
   Person copyWith({
-    int id,
-    String firstName,
-    String lastName,
-    int age,
+    int? id,
+    String? firstName,
+    String? lastName,
+    int? age,
   }) {
     if ((id == null || identical(id, this.id)) &&
         (firstName == null || identical(firstName, this._firstName)) &&
@@ -155,7 +155,7 @@ class Person {
 You can find additional settings under `Settings` > `Editor` > `Dart Data Class Plugin` where you have the following customization options:
 
 - set the name of the copy method
-- use `@required` annotation
+- use `required` annotation
 - use `new` keyword when instantiation
 - use the `const` keyword for the constructor generation - all fields in the class have to be final
 - copy function can be specified to return the same instance. This Option has the same requirement as the const keyword. Useful when using Dart in a Redux architecture.

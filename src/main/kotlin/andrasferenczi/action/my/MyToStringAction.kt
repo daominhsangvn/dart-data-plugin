@@ -4,6 +4,7 @@ import andrasferenczi.action.StaticActionProcessor
 import andrasferenczi.action.data.GenerationData
 import andrasferenczi.action.data.PerformAction
 import andrasferenczi.declaration.variableName
+import andrasferenczi.declaration.isFinal
 import andrasferenczi.ext.psi.extractClassName
 import andrasferenczi.ext.psi.findMethodsByName
 import andrasferenczi.templater.NamedVariableTemplateParamImpl
@@ -36,7 +37,7 @@ class MyToStringAction {
                 templateManager = templateManager,
                 params = ToStringTemplateParams(
                     className = dartClassName,
-                    variables = declarations.map { NamedVariableTemplateParamImpl(it.variableName) }
+                    variables = declarations.map { NamedVariableTemplateParamImpl(isFinal = it.isFinal, variableName = it.variableName) }
                 )
             )
 
