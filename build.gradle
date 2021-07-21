@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'andrasferenczi'
-version '0.1.1'
+version '0.1.2'
 
 sourceCompatibility = 1.8
 
@@ -20,8 +20,8 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.1.1'
-    plugins = ['dart:191.6707.7']
+    version '202.7660.26'
+    plugins = ['dart:202.8531']
     pluginName 'Dart Data class methods generator'
     intellij.updateSinceUntilBuild false
 }
