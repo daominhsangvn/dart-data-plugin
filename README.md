@@ -169,3 +169,9 @@ This project is built using Kotlin and makes use of IntelliJ's PSI elements for 
 ### Known issues
 
 - If the class ends with a single-line comment, code is generated from an invalid location
+
+### Making Build
+- File > Project Structure: Setting up the Artifacts without main class
+  - Create custom folder `META-INF`
+  - Add `src\main\resources\META-INF\plugin.xml` to custom folder above
+- Build > Artifacts
